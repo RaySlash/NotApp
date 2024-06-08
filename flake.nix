@@ -27,17 +27,16 @@
           pkgs = import inputs.nixpkgs { inherit system; config.allowUnfree = true; };
 
           buildDeps = with pkgs; [
-            android-studio
-            android-tools
+            git
             bun
             nodejs
-            git
             react-native-debugger
-            surrealdb
-            surrealist
             typescript
             watchman
             openssl
+            sqlite
+            android-studio
+            android-tools
             prisma-engines
             nodePackages.prisma
             nodePackages.typescript-language-server
