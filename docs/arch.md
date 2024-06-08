@@ -16,7 +16,18 @@ It uses SQLite for storing notes.It is a simple application which is useful for 
 ### Tables
 
 `note`
-| id | title | content | created_at | updated_at |
-| --- | ----- | ------- | ---------- | ---------- |
-| 1 | Note1 | Content | 2021-05-01 | 2021-05-01 |
-| 2 | Note2 | Content | 2021-05-01 | 2021-05-01 |
+| id | title | content | created_at | updated_at | categoryId |
+| --- | ----- | ------- | ---------- | ---------- | ---------- |
+| 1 | Note1 | Content | 2021-05-01 | 2021-05-01 | 1 |
+| 2 | Note2 | Content | 2021-05-01 | 2021-05-01 | 1 |
+| 3 | Note3 | Content | 2021-05-01 | 2021-05-01 | 2 |
+
+`category`
+| id | name | created_at |
+| --- | ---- | ---------- |
+| 1 | Category1 | 2021-05-01 |
+| 2 | Category2 | 2021-05-01 |
+
+## References
+
+[Expo SQLite](https://docs.expo.dev/versions/latest/sdk/sqlite)
