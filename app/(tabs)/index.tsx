@@ -3,7 +3,7 @@ import React from "react";
 
 const TabOneScreen = () => {
   return (
-    <View>
+    <View className="flex-col justify-center items-center">
       <Text>TabOneScreen</Text>
     </View>
   );

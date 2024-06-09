@@ -1,16 +1,41 @@
-# Starter base
+# Not App
 
-A starting point to help you set up your project quickly and use the common components provided by `react-native-reusables`. The idea is to make it easier for you to get started.
+Yet another simple note application.
 
 ## Features
 
+- React Native Reusable
+- Tabs layout
 - NativeWind v4
+- Nix Flake Initialised
 - Dark and light mode
-    - Android Navigation Bar matches mode
-    - Persistant mode
-- Common components
-    - ThemeToggle, Avatar, Button, Card, Progress, Text, Tooltip
+  - Android Navigation Bar matches mode
+  - Persistant mode
 
-<img src="https://github.com/mrzachnugent/react-native-reusables/assets/63797719/42c94108-38a7-498b-9c70-18640420f1bc"
-     alt="starter-base-template"
-     style="width:270px;" />
+## Build
+
+1. Install [Nix](https://nixos.org/download/) and setup development environment
+
+```bash
+sh <(curl -L https://nixos.org/nix/install) --daemon
+
+# NOTE: Follow the installation process as instructed on Nix website
+# before running the following command
+
+nix develop
+```
+
+2. Install dependencies using bun
+
+```bash
+bun install # or bun i
+```
+
+3. Run the application
+
+```bash
+# use appropriate command for your platform
+bun android
+bun ios
+bun web
+```
