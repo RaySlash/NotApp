@@ -1,5 +1,6 @@
 import { Tabs } from "expo-router";
 import { Info } from "@lib/icons/Info";
+import { Sun } from "@lib/icons/Sun";
 
 export default function TabLayout() {
   return (
@@ -15,7 +16,7 @@ export default function TabLayout() {
         name="settings"
         options={{
           title: "Settings",
-          tabBarIcon: () => <Info />,
+          tabBarIcon: () => <Sun />,
         }}
       />
     </Tabs>

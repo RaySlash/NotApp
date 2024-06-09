@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Starter Base",
-    "slug": "starter-base",
-    "version": "1.0.0",
+    "name": "notapp",
+    "slug": "notapp",
+    "version": "0.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
@@ -12,9 +12,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.rayslash.notapp"
@@ -31,11 +29,6 @@
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
-    "plugins": [
-      "expo-router"
-    ],
-    "experiments": {
-      "typedRoutes": true
-    }
+    "plugins": ["expo-router"]
   }
 }
