@@ -1,4 +1,4 @@
-rootProject.name = 'Starter Base'
+rootProject.name = 'notapp'
 
 dependencyResolutionManagement {
   versionCatalogs {
