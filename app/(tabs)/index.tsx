@@ -5,6 +5,7 @@ import { Text } from "@components/ui/text";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Search } from "@lib/icons/Search";
 import { Button } from "~/components/ui/button";
+import { useColorScheme } from "~/lib/useColorScheme";
 import {
   Card,
   CardHeader,
@@ -38,6 +39,8 @@ const TabOneScreen = () => {
 };
 
 function SearchBar() {
+  const colorScheme = useColorScheme();
+
   return (
     <View className="flex-row justify-between items-center">
       <Input
@@ -45,7 +48,12 @@ function SearchBar() {
         className="flex-1 ml-4 rounded-full shadow-xl"
       />
       <Button variant={"ghost"}>
-        <Search size={24} color="black" />
+        <Text>
+          <Search
+            size={24}
+            color={colorScheme.isDarkColorScheme ? "white" : "black"}
+          />
+        </Text>
       </Button>
     </View>
   );
