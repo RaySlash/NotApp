@@ -1,6 +1,7 @@
 import { Tabs } from "expo-router";
-import { Info } from "@lib/icons/Info";
-import { Sun } from "@lib/icons/Sun";
+import { Home } from "@lib/icons/Home";
+import { Settings } from "@lib/icons/Settings";
+import { Plus } from "@lib/icons/Plus";
 
 export default function TabLayout() {
   return (
@@ -9,14 +10,24 @@ export default function TabLayout() {
         name="index"
         options={{
           title: "Home",
-          tabBarIcon: () => <Info />,
+          headerShown: false,
+          tabBarIcon: ({ color }) => <Home size={24} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="new"
+        options={{
+          title: "New Note",
+          headerShown: false,
+          tabBarIcon: ({ color }) => <Plus size={24} color={color} />,
         }}
       />
       <Tabs.Screen
         name="settings"
         options={{
           title: "Settings",
-          tabBarIcon: () => <Sun />,
+          headerShown: false,
+          tabBarIcon: ({ color }) => <Settings size={24} color={color} />,
         }}
       />
     </Tabs>
