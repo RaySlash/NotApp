@@ -17,7 +17,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="new"
         options={{
-          title: "New Note",
+          title: "Add",
           headerShown: false,
           tabBarIcon: ({ color }) => <Plus size={24} color={color} />,
         }}
@@ -26,7 +26,7 @@ export default function TabLayout() {
         name="settings"
         options={{
           title: "Settings",
-          headerShown: false,
+          headerShown: true,
           tabBarIcon: ({ color }) => <Settings size={24} color={color} />,
         }}
       />

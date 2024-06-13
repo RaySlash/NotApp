@@ -2,9 +2,15 @@
 
 Basic application which allows user to save notes and view them later.
 It is written in TypeScript, React-native with Expo build tools.
-It uses SQLite for storing notes.It is a simple application which is useful for beginners to understand the basic concepts of React-native and Expo.
+It uses React Native Reusable Components for UI.
+It uses SQLite for storing notes.
 
 ## Features
+
+- [ ] User can add categories.
+- [ ] User can view categories.
+- [ ] User can delete categories.
+- [ ] User can edit categories.
 
 - [ ] User can add notes.
 - [ ] User can view notes.
@@ -12,6 +18,40 @@ It uses SQLite for storing notes.It is a simple application which is useful for 
 - [ ] User can edit notes.
 
 ## System
+
+### Description
+
+User can add categories. Then user can add a note that belongs to a category.
+
+```js
+// In this example, user adds a category named 'Books' and adds a note to it.
+const booksCategory = [];
+
+const note1 = {
+  title: "Note1",
+  content: "This is a simple note.",
+  category: "booksCategory",
+};
+
+const note2 = {
+  title: "Note2",
+  content: "This is another simple note.",
+};
+
+// add to default category (uncategorised)
+if (!note.category) {
+  defaultCategory.push(note);
+}
+
+// add to category
+if (note.category) {
+  const noteCategory = note.category;
+  noteCategory.push(note);
+}
+
+// note 2 is added to default category
+// note 1 is added to 'Books' category
+```
 
 ### Tables
 
@@ -31,3 +71,4 @@ It uses SQLite for storing notes.It is a simple application which is useful for 
 ## References
 
 [Expo SQLite](https://docs.expo.dev/versions/latest/sdk/sqlite)
+[React Native Reusables](https://rnr-docs.vercel.app/)

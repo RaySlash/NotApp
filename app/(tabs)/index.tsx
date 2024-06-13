@@ -14,14 +14,12 @@ import {
   CardContent,
 } from "~/components/ui/card";
 
-const TabOneScreen = () => {
+const HomeScreen = () => {
   return (
     <SafeAreaView>
+      <SearchBar />
       <ScrollView>
-        <View className="flex-col justify-center items-center w-screen">
-          <SearchBar />
-          <TagBar />
-        </View>
+        <TagBar />
         <View className="grid-cols-3 w-screen">
           <NoteCard />
           <NoteCard />
@@ -42,7 +40,7 @@ function SearchBar() {
   const colorScheme = useColorScheme();
 
   return (
-    <View className="flex-row justify-between items-center">
+    <View className="flex-row mb-4 justify-between items-center">
       <Input
         placeholder="Search"
         className="flex-1 ml-4 rounded-full shadow-xl"
@@ -61,20 +59,36 @@ function SearchBar() {
 
 function TagBar() {
   return (
-    <View className="p-4 flex-row w-full justify-between items-center">
-      <Button variant={"outline"}>
+    <ScrollView
+      className="flex-1 gap-2"
+      horizontal={true}
+      showsHorizontalScrollIndicator={false}
+    >
+      <Button variant={"link"}>
         <Text>#help</Text>
       </Button>
-      <Button variant={"outline"}>
+      <Button variant={"link"}>
         <Text>#budget</Text>
       </Button>
-      <Button variant={"outline"}>
+      <Button variant={"link"}>
         <Text>#work</Text>
       </Button>
-      <Button variant={"outline"}>
+      <Button variant={"link"}>
         <Text>#personal</Text>
       </Button>
-    </View>
+      <Button variant={"link"}>
+        <Text>#help</Text>
+      </Button>
+      <Button variant={"link"}>
+        <Text>#help</Text>
+      </Button>
+      <Button variant={"link"}>
+        <Text>#help</Text>
+      </Button>
+      <Button variant={"link"}>
+        <Text>#help</Text>
+      </Button>
+    </ScrollView>
   );
 }
 
@@ -97,4 +111,4 @@ function NoteCard() {
   );
 }
 
-export default TabOneScreen;
+export default HomeScreen;

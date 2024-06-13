@@ -1,16 +1,28 @@
-import React from "react";
+import { useState } from "react";
+import { useRouter } from "expo-router";
 import { View, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Input } from "~/components/ui/input";
 import { Text } from "@components/ui/text";
 import { Button } from "~/components/ui/button";
 import { Textarea } from "~/components/ui/textarea";
-import { useRouter } from "expo-router";
 
-const TabAddScreen = () => {
+function TabAddScreen() {
+  const router = useRouter();
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+
+  const handleTextChange = (text: string) => {
+    setTitle(text);
+  };
+
+  const handleDiscard = () => {
+    router.push("(tabs)");
+  };
+
   return (
     <SafeAreaView className="flex-col m-2 justify-center items-center">
-      <ActionBar />
+      <ActionBar handleDiscard={handleDiscard} />
       <ScrollView
         className="flex-col mt-8 m-2"
         contentContainerStyle={{
@@ -18,22 +30,24 @@ const TabAddScreen = () => {
           justifyContent: "center",
         }}
       >
-        <Input placeholder="Title" className="w-full font-bold" />
+        <Input
+          placeholder="Title"
+          className="w-full font-bold"
+          value={title}
+          onChangeText={handleTextChange}
+        />
         <Textarea
           placeholder="Write your note here"
           className="mx-2 mt-2 w-full"
+          value={content}
+          onChangeText={setContent}
         />
       </ScrollView>
     </SafeAreaView>
   );
-};
+}
 
-function ActionBar() {
-  const router = useRouter();
-  const handleDiscard = () => {
-    router.push("(tabs)");
-  };
-
+function ActionBar({ handleDiscard }) {
   return (
     <View className="flex-row justify-between items-center">
       <Button variant={"ghost"} onPress={handleDiscard}>
