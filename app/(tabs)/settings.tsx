@@ -16,7 +16,7 @@ const SettingsScreen = () => {
       <View className="flex gap-y-2 w-full">
         <Button
           variant={"outline"}
-          onPress={() => router.push("/note-options")}
+          onPress={() => router.push("/notesettings")}
         >
           <Text>Note Settings</Text>
         </Button>
@@ -25,11 +25,11 @@ const SettingsScreen = () => {
         </Button>
         <Button
           variant={"outline"}
-          onPress={() => router.push("/notification-options")}
+          onPress={() => router.push("/notificationsettings")}
         >
           <Text>Notification Settings</Text>
         </Button>
-        <Button variant={"outline"} onPress={() => router.push("/about-app")}>
+        <Button variant={"outline"} onPress={() => router.push("/about")}>
           <Text>About App</Text>
         </Button>
       </View>
