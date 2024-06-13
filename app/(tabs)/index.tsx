@@ -2,7 +2,7 @@ import React from "react";
 import { ScrollView, View } from "react-native";
 import { Input } from "@components/ui/input";
 import { Text } from "@components/ui/text";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Search } from "@lib/icons/Search";
 import { Button } from "~/components/ui/button";
 import { useColorScheme } from "~/lib/useColorScheme";
@@ -15,8 +15,10 @@ import {
 } from "~/components/ui/card";
 
 const HomeScreen = () => {
+  const insets = useSafeAreaInsets();
+
   return (
-    <SafeAreaView>
+    <View style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}>
       <SearchBar />
       <ScrollView>
         <TagBar />
@@ -32,7 +34,7 @@ const HomeScreen = () => {
           <NoteCard />
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 
